@@ -1,23 +1,23 @@
-#include <stdio.h>
+#include "main.h"
 /**
-*main - prints sum of even fibonacci
-*suit elements
-*fibonacci suit numbers
-*Return: return 0
+*jack_bauer - prints each minute of the day
+*
+*Return:returns 0
 */
-int main(void)
+void jack_bauer(void)
 {
-unsigned long n1 = 0, n2 = 1, n3 = 0, sum = 0;
-while (n3 <= 4000000)
+int min, hour;
+for (hour = 0; hour <= 23; hour++)
 {
-n3 = n1 + n2;
-n1 = n2;
-n2 = n3;
-
-if ((n1 % 2) == 0)
-sum += n1;
-
+for (min = 0; min <= 59; min++)
+{
+_putchar((hour / 10) + '0');
+_putchar((hour % 10) + '0');
+_putchar(':');
+_putchar((min / 10) + '0');
+_putchar((min % 10) + '0');
+_putchar(10);
 }
-printf("%ld\n", sum);
-return (0);
+}
+
 }
